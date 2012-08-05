@@ -147,7 +147,7 @@ public class DistinctQueryImpl<T> extends CriteriaContainerImpl implements Crite
 
   @Override
   public String toString() {
-    return  "distinct( \"" + key + "\" , " + this.queryImpl.getQueryObject() + " )";
+    return "distinct( \"" + key + "\" , " + this.queryImpl.getQueryObject() + " )";
   }
 
 }
