@@ -1,45 +1,46 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-
-	<parent>
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
 		<groupId>com.google.code.morphia</groupId>
-		<artifactId>morphia-parent</artifactId>
-		<version>1.2</version>
-		<relativePath>../</relativePath>
-	</parent>
-
-	<properties>
-		<maven.compiler.source>1.6</maven.compiler.source>
-		<maven.compiler.target>1.6</maven.compiler.target>
-	</properties>
-	
-	<modelVersion>4.0.0</modelVersion>
 	<artifactId>morphia</artifactId>
-	<packaging>jar</packaging>
-	<version>1.00-SNAPPYSHOT2</version>
+  <version>1.00-SNAPPYSHOT4</version>
 	<name>morphia</name>
-
 	<dependencies>
 		<dependency>
 			<groupId>cglib</groupId>
 			<artifactId>cglib-nodep</artifactId>
 			<version>[2.1_3,)</version>
-			<type>jar</type>
 			<optional>true</optional>
 		</dependency>
 		<dependency>
 			<groupId>com.thoughtworks.proxytoys</groupId>
 			<artifactId>proxytoys</artifactId>
 			<version>1.0</version>
-			<type>jar</type>
 			<optional>true</optional>
 		</dependency>
         <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongo-java-driver</artifactId>
+            <version>2.7.3</version>
+            <type>jar</type>
+            <optional>false</optional>
+        </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
             <groupId>org.xerial.snappy</groupId>
             <artifactId>snappy-java</artifactId>
             <version>1.0.4.1</version>
-            <type>jar</type>
             <scope>compile</scope>
         </dependency>
 	</dependencies>
+  <properties>
+    <maven.compiler.source>1.6</maven.compiler.source>
+    <maven.compiler.target>1.6</maven.compiler.target>
+  </properties>
 </project>
