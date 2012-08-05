@@ -546,5 +546,11 @@ public class QueryImpl<T> extends CriteriaContainerImpl implements Query<T>, Cri
 		return null;
 	}
 
+	public <DT> DistinctQuery<DT> distinct(String property, Class<DT> classOfDistinctField) {
+		StringBuffer sb = new StringBuffer(property);//validate might modify prop string to translate java field name to db field name
+		Mapper.validate(query.getEntityClass(), query.getDatastore().getMapper(), sb, null, null, true, false);
+		return new DistinctQueryImpl<DT>(classOfDistinctField,this,property);
+	}
+
 
 }

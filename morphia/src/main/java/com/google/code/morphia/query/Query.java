@@ -89,6 +89,8 @@ public interface Query<T> extends QueryResults<T>, Cloneable {
 	Query<T> enableValidation();
 	/** Turns off validation (for all calls made after)*/
 	Query<T> disableValidation();
+	/** Query for distinct query*/
+	<DT> DistinctQuery<DT> distinct(String property,Class<DT> classOfDistinctField);
 	
 	/** Hints as to which index should be used.*/
 	Query<T> hintIndex(String idxName);
